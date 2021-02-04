@@ -9,6 +9,9 @@ RUN yum -y update && \
 RUN yum -y install vim
 RUN yum -y install make gcc gcc-c++ autoconf cmake3 json-devel libusb-devel
 RUN yum -y install automake git cmake
+RUN yum -y remove git*
+RUN yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm
+RUN yum -y install git
 RUN yum -y install gdb
 RUN yum -y install curl wget
 RUN yum -y install centos-release-scl
